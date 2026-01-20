@@ -1,4 +1,4 @@
-// Date : 21-01-2026
+// Date : 21-01-2026 Time:00:41
 class Solution {
     public int search(int[] arr, int target) {
         int n = arr.length;
