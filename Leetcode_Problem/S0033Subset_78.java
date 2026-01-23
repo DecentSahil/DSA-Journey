@@ -4,7 +4,7 @@ class Solution {
         List<List<Integer>> list =  new ArrayList<>();
         return allpair(0,nums,new ArrayList<>(),list);
     }
-    static List<List<Integer>> allpair(int index,int[] nums,ArrayList current,List<List<Integer>> list ){
+    static List<List<Integer>> allpair(int index, int[] nums,ArrayList current,List<List<Integer>> list ){
         list.add(new ArrayList<>(current));
         for(int i=index; i<nums.length; i++){
             current.add(nums[i]);
