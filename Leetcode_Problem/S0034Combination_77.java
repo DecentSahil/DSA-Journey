@@ -8,7 +8,7 @@ class Solution {
     public static void helperFunction(int index,int total,int pairing,List<List<Integer>> list,List<Integer> current){
         if(current.size()==pairing){
             list.add(new ArrayList<>(current));
-            return;
+            return ;
         }
         for(int i=index; i<=total; i++){
             current.add(i);
