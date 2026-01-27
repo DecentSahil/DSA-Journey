@@ -2,8 +2,15 @@
 class Solution {
     public int heightChecker(int[] heights) {
         int n = heights.length;
-        
+        int[] original = heights.clone();
         quickSort(heights,0,n-1);
+        int count = 0;
+        for(int i=0; i<n; i++){
+            if(heights[i]!=original[i]){
+                count++;
+            }
+        }
+        return count;
 
     }
     static void quickSort(int[] heights,int low,int high){
@@ -16,12 +23,12 @@ class Solution {
     }
     static int partition(int[] heights,int low,int high){
         int index = low;
-        int pivot = arr[high];
+        int pivot = heights[high];
         for(int i=low; i<high; i++){
             if(pivot>heights[i]){
                 int temp = heights[index];
-                heights[index++] = heights[high];
-                heights[high] = temp;
+                heights[index++] = heights[i];
+                heights[i] = temp;
             }
         }
         int temp = heights[index];
