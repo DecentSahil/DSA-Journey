@@ -4,7 +4,6 @@ class Solution {
         mergeSort(nums, 0, nums.length - 1);
         return nums[k - 1];
     }
-
     private void mergeSort(int[] nums, int left, int right) {
         if (left < right) {
             int mid = left + (right - left) / 2;
